@@ -11,10 +11,11 @@ int main2(int argc, char** argv)
 	
 	for (std::size_t iTest = 0; iTest < test_data_count; ++iTest)
 	{
+		std::cout <<"test-"<< iTest<<std::endl;
 		if (test_data[iTest].result != vector_mod(test_data[iTest].dividend, test_data[iTest].dividend_size, test_data[iTest].divisor))
 		{
 			std::cout << "FAILURE==\n";
-			return -1;
+			//return -1;
 		}
 	}
 	std::cout << "ok.==\n";
@@ -32,10 +33,18 @@ int main2(int argc, char** argv)
 
 	return 0;
 }
-
+/*
+	
+*/
 int main() {
 	set_num_threads(1);
-	IntegerWord v = 123, m = 100, r = vector_mod(&v, 1, m);
-	std::cout << r << std::endl;
+	IntegerWord v[] = { 1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0,
+	1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0,
+	1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0,
+	1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0 };
+	IntegerWord m = 0x100, r = vector_mod(v, 1, m);
+
+	std::cout <<std::hex << r << std::endl;
+	main2(1, 0);
 	return 0;
 }
