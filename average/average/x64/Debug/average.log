@@ -1,0 +1,29 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Project1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  average.cpp
+D:\GitHub\Parallel_CPP\average\average\average.cpp(47,11): warning C4244: '=': conversion from 'size_t' to '_Ty', possible loss of data
+D:\GitHub\Parallel_CPP\average\average\average.cpp(47,11): warning C4244:         with
+D:\GitHub\Parallel_CPP\average\average\average.cpp(47,11): warning C4244:         [
+D:\GitHub\Parallel_CPP\average\average\average.cpp(47,11): warning C4244:             _Ty=double
+D:\GitHub\Parallel_CPP\average\average\average.cpp(47,11): warning C4244:         ]
+D:\GitHub\Parallel_CPP\average\average\scalability.h(19,51): warning C4244: 'return': conversion from '_Rep' to 'double', possible loss of data
+D:\GitHub\Parallel_CPP\average\average\scalability.h(19,51): warning C4244:         with
+D:\GitHub\Parallel_CPP\average\average\scalability.h(19,51): warning C4244:         [
+D:\GitHub\Parallel_CPP\average\average\scalability.h(19,51): warning C4244:             _Rep=__int64
+D:\GitHub\Parallel_CPP\average\average\scalability.h(19,51): warning C4244:         ]
+  (compiling source file 'average.cpp')
+  D:\GitHub\Parallel_CPP\average\average\scalability.h(19,51):
+  the template instantiation context (the oldest one first) is
+  	D:\GitHub\Parallel_CPP\average\average\average.cpp(49,14):
+  	see reference to function template instantiation 'scalability get_speedups<double(__cdecl *)(const double *,size_t),double*,size_t>(F,double *,size_t)' being compiled
+          with
+          [
+              F=double (__cdecl *)(const double *,size_t)
+          ]
+  	D:\GitHub\Parallel_CPP\average\average\scalability.h(30,20):
+  	see reference to function template instantiation 'double get_time<double(__cdecl *)(const double *,size_t),double*,size_t>(F,double *,size_t)' being compiled
+          with
+          [
+              F=double (__cdecl *)(const double *,size_t)
+          ]
+  
+  average.vcxproj -> D:\GitHub\Parallel_CPP\average\x64\Debug\average.exe
